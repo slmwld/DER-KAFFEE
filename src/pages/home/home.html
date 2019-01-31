@@ -8,42 +8,17 @@
 
 <ion-content padding>
 
-  <ion-card>
-      <img src="assets/imgs/logo-alquimia_v2.png">
+    
+
+ 
+    <ion-card 
+    *ngFor="let currentCard of _datacards">
+        <img src="assets/imgs/{{ currentCard.image }}">
   
-      </ion-card
-      *ngFor="let currentCard of _dataCards">
-      <img src="assets/imgs/{{ currentCard.image }}">
-      
         <ion-card-content>
-        <ion-card-title>Enjoying a Coffee</ion-card-title>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-          Non incidunt beatae, natus quos facilis eos, recusandae quaerat placeat nemo dolorem praesentium ad eligendi delectus a aspernatur neque eveniet. 
-          Eveniet, veritatis?</p>
-          <ion-card-title>{{ currentCard.title }}</ion-card-title>
-      </ion-card-content>
-
-  </ion-card>
-
-  <ion-card>
-      <img src="assets/imgs/aroma-art-beverage.png">
-
-      <ion-card-content>
-          <ion-card-title>Sharing Moments</ion-card-title>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-      </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-      <img src="assets/imgs/art-blur-cappuccino.png">
-
-      <ion-card-content>
-          <ion-card-title>Happiness</ion-card-title>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-      </ion-card-content>
-  </ion-card>
-  
-  
-  
+            <ion-card-title>{{ currentCard.title }}</ion-card-title>
+            <p>{{ currentCard.descripcion }}</p>
+        </ion-card-content>
+    </ion-card>
   
 </ion-content>
